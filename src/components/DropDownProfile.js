@@ -2,19 +2,19 @@ import React from "react"
 
 const DropDownProfile = () => {
   return (
-    <div className="Dropdown">
+    <div className="Dropdown d-inline">
 
-      <button className="btn dropdown-toggle" href="#" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-      ☰ Menu
+      <button className="btn fst-italic bg-success text-white">
+        ☰ Menu
       </button>
 
-      <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-        <li><button className="dropdown-item" href="#">My Profile</button></li>
-        <li><button className="dropdown-item" href="#">My Orders</button></li>
-        <li><button className="dropdown-item" href="#">Wallet</button></li>
-        <li><button className="dropdown-item" href="#">Promotions</button></li>
-        <li><button className="dropdown-item" href="#">Help</button></li>
-        <li><button className="dropdown-item" href="#">Settings</button></li>
+      <ul className="dropdown-menu">
+        <li><a className="dropdown-item" href="/myProfile">My Profile</a></li>
+        <li><a className="dropdown-item" href="/myOrders">My Orders</a></li>
+        <li><a className="dropdown-item" href="/wallet">Wallet</a></li>
+        <li><a className="dropdown-item" href="/promotions">Promotions</a></li>
+        <li><a className="dropdown-item" href="/help">Help</a></li>
+        <li><a className="dropdown-item" href="/settings">Settings</a></li>
       </ul>
     </div>
   )
