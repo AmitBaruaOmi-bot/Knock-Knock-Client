@@ -12,13 +12,46 @@ export default function Carousel() {
                         </form>
                     </div>
                     <div className="carousel-item active">
-                        <img src="https://source.unsplash.com/random/300×300/?burger" className="d-block w-100" style={{filter: "brightness(30%)"}} alt="" />
+                        <img src="https://picsum.photos/id/292/1000/500/" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
                     </div>
                     <div className="carousel-item">
-                        <img src="https://source.unsplash.com/random/300×300/?pizza" className="d-block w-100" style={{filter: "brightness(30%)"}} alt="" />
+                        <img src="https://picsum.photos/id/488/1000/500/" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
                     </div>
                     <div className="carousel-item">
-                        <img src="https://source.unsplash.com/random/300×300/?Fries" className="d-block w-100" style={{filter: "brightness(30%)"}} alt="" />
+                        <img src="https://picsum.photos/id/999/1000/500" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://picsum.photos/id/63/1000/500" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://picsum.photos/id/75/1000/500" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://picsum.photos/id/225/1000/500" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://picsum.photos/id/326/1000/500" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://picsum.photos/id/425/1000/500" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://picsum.photos/id/431/1000/500" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://picsum.photos/id/490/1000/500" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://picsum.photos/id/493/1000/500" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://picsum.photos/id/835/1000/500" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://picsum.photos/id/889/1000/500" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://picsum.photos/id/425/1000/500" className="d-block w-1000" style={{filter: "brightness(30%)"}} alt="" />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">

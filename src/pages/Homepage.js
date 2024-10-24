@@ -16,12 +16,6 @@ export default function Homepage() {
         <Food/> 
         <Food/> 
         <Food/> 
-        <Food/> 
-        <Food/> 
-        <Food/> 
-        <Food/> 
-        <Food/> 
-        <Food/> 
       </div>
 
       <div> <Footer /> </div>

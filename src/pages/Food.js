@@ -21,6 +21,7 @@ export default function Food() {
                             <option value="menu">Menu</option>
                         </select>
                         <select className='m-2 h-100 bg-success rounded d-inline text-white'>
+                            <option value="regular">Regular</option>
                             <option value="medium">Medium</option>
                             <option value="large">Large</option>
                         </select>
