@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
 import Homepage from './pages/Homepage';
 import Login from './pages/Login';
@@ -14,14 +14,14 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <Router>
-      <div>
-        <Routes>
-          <Route exact path="/" element={<Homepage/>} />
-          <Route exact path="/login" element={<Login/>} />
-          <Route exact path="/signup" element={<Signup/>} />
 
-        </Routes>
-      </div>
+      <Routes>
+        <Route exact path="/" element={<Homepage />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/signup" element={<Signup />} />
+
+      </Routes>
+
     </Router>
   );
 }
