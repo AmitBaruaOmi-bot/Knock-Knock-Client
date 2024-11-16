@@ -4,7 +4,9 @@ import Footer from '../components/Footer'
 import Food from './Food'
 import Carousel from '../components/Carousel'
 
+
 export default function Homepage() {
+
   return (
     <div className='home bg-success'>
       <div> <Navbar /> </div>
@@ -12,7 +14,6 @@ export default function Homepage() {
       <div><Carousel/></div>
       
       <div className='m-3'> 
-        <Food/> 
         <Food/> 
         <Food/> 
         <Food/> 

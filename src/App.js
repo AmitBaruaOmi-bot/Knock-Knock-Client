@@ -27,3 +27,20 @@ function App() {
 }
 
 export default App;
+
+
+/*
+
+import Myprofile from './pages/Myprofile';
+import Wallet from './pages//Wallet';
+import Promotions from './pages/Promotions';
+import Help from './pages/Help';
+import Settings from './pages/Settings';
+
+          <Route exact path="/myprofile" element={<Myprofile/>} />
+          <Route exact path="/myorders" element={<Myorders/>} />
+          <Route exact path="/wallet" element={<Wallet/>} />
+          <Route exact path="/promotions" element={<Promotions/>} />
+          <Route exact path="/help" element={<Help/>} />
+          <Route exact path="/settings" element={<Settings/>} />
+          */
