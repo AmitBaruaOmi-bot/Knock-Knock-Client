@@ -15,6 +15,7 @@ export default function Homepage() {
 
       <div> <Navbar /> </div>
 
+<<<<<<< HEAD
       <div><Carousel /></div>
 
       <div className='m-3'>
@@ -27,6 +28,14 @@ export default function Homepage() {
        <Food/>
        <Food/>
        <Food/>
+=======
+      <div><Carousel/></div>
+      
+      <div className='m-3'> 
+        <Food/> 
+        <Food/> 
+        <Food/> 
+>>>>>>> Commit
       </div>
 
       <div> <Footer /> </div>
