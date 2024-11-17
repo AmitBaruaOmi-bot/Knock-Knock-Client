@@ -70,6 +70,3 @@ export default function Signup() {
 
 
 
-[build]
-  command = " && mkdir dist && mv build/* dist"
-  publish = "dist"
