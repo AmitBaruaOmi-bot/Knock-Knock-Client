@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import DropDownProfile from './DropDownProfile'
 
 export default function Navbar() {
     return (
@@ -9,8 +8,6 @@ export default function Navbar() {
                 <div className="container-fluid">
                     <div>
                         <Link className="navbar-brand fst-italic bg-success d-inline text-white" to="/">Knock-Knock</Link>
-
-                        <DropDownProfile/>
 
                         <Link className="nav-link fst-italic d-inline text-white" to="/login">Login</Link>
 

@@ -2,18 +2,22 @@ import { useState } from "react"
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom"
+import "./Login.css"
 
 export default function Login() {
+
+  const navigate = useNavigate()
 
   const [userData, setUserData] = useState({ email: "", password: "" })
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post("http://localhost:5005/auth/login", { email: userData.email, password: userData.password })
-      .then((res) => {
-        if (res.data.success) {
-          res.redirect('/')
-        }
+    axios.post(`http://localhost:5005/api/login`, { email: userData.email, password: userData.password })
+      .then((res)=>{
+        console.log(userData.data)
+        res.json(userData.data)
+        navigate("/homepageafterlogin")
       })
       .catch((err) => {
         alert("**Failed to login. Please try again.**")

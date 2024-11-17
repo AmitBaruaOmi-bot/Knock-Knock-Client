@@ -1,11 +1,38 @@
-import { useState } from "react"
 import React from 'react'
-import axios from 'axios'
 import { Link } from 'react-router-dom'
-import Homepage from "./Homepage"
+import NavbarForUsers from "../components/NavbarForUsers"
+import Carousel from "../components/Carousel"
+
+import Footer from '../components/Footer'
+import Food from '../components/Food'
 
 export default function HomepageAfterLogin() {
   return (
-    <div>HomepageAfterLogin</div>
+    <div>
+
+      <div className='home bg-success'>
+
+        <div> <NavbarForUsers /> </div>
+
+        <div> <Carousel /> </div>
+
+        <div className='m-3'>
+          <Food/>
+          <Food/>
+          <Food/>
+          <Food/>
+          <Food/>
+          <Food/>
+          <Food/>
+          <Food/>
+          <Food/>
+        </div>
+
+        <div> <Footer /> </div>
+
+        <Link to={"/"} className="m-3 btn btn-primary"> Logout </Link>
+
+      </div>
+    </div>
   )
 }

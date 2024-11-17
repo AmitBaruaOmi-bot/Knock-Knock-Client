@@ -1,7 +1,16 @@
 import React from 'react'
 
 export default function Myorders() {
+
+  // function handleSubmit(e) {
+  //   e.preventDefault()
+    
+  // }
   return (
-    <div>Myorders</div>
+    <div>
+      <form>
+        
+      </form>
+    </div>
   )
 }

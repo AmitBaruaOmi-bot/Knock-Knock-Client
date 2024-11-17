@@ -1,0 +1,13 @@
+.container{
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    background-color: rgb(152, 230, 204);
+    flex-direction: column;
+    gap: 50px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+}

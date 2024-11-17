@@ -10,7 +10,6 @@ export default function Footer() {
           <li className="nav-item"><Link to="/" className="nav-link px-2 text-white">Contact Us</Link></li>
           <li className="nav-item"><Link to="/" className="nav-link px-2 text-white">Terms & Conditions</Link></li>
           <li className="nav-item"><Link to="/" className="nav-link px-2 text-white">Policy's</Link></li>
-          <li className="nav-item"><Link to="/" className="nav-link px-2 text-white">Logout</Link></li>
         </ul>
         <p className="text-center text-white">© 2024 Knock-Knock, Inc</p>
       </footer>

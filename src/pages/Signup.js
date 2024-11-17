@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import "./Signup.css"
+import { useNavigate } from'react-router-dom'
 export default function Signup() {
+
+  const navigate = useNavigate()
 
   const [userData, setUserData] = useState({ name: "", email: "", password: "", location: "" })
 
@@ -9,17 +13,16 @@ export default function Signup() {
     /*Synthetic event*/
     e.preventDefault();
    
-    axios.post("http://localhost:5005/auth/signup", { email: userData.email, password: userData.password, location: userData.location, name: userData.name })
-    .then((res)=>{
-      console.log(res.userData)
-      if(res.userData.success){
-        alert("User created successfully!")
-        res.redirect ("/login");
-      }else{
-        alert("Failed to create user. Please try again.")
-      }
+    axios.post(`http://localhost:5005/api/signup`, { email: userData.email, password: userData.password, location: userData.location, name: userData.name })
+    .then((res) => {
+      console.log(userData.data)
+      res.json(userData.data)
+      navigate("/homepageafterlogin")
     })
-    
+    .catch((err) => {
+      console.log(err)
+      alert('User already exists')
+    })
   }
 
     const clickEvent = (event) => {
