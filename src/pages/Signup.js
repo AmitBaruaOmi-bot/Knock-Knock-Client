@@ -1,24 +1,18 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-<<<<<<< HEAD
 import "./Signup.css"
 import { useNavigate } from'react-router-dom'
 export default function Signup() {
 
   const navigate = useNavigate()
 
-=======
-export default function Signup() {
-
->>>>>>> Commit
   const [userData, setUserData] = useState({ name: "", email: "", password: "", location: "" })
 
   const handleSubmit = async (e) => {
     /*Synthetic event*/
     e.preventDefault();
    
-<<<<<<< HEAD
     axios.post(`http://localhost:5005/api/signup`, { email: userData.email, password: userData.password, location: userData.location, name: userData.name })
     .then((res) => {
       console.log(userData.data)
@@ -29,13 +23,6 @@ export default function Signup() {
       console.log(err)
       alert('User already exists')
     })
-=======
-    axios.post("http://localhost:5005/auth/signup", { email: userData.email, password: userData.password, location: userData.location, name: userData.name })
-    .then((response)=>{
-      console.log(response)
-    })
-    
->>>>>>> Commit
   }
 
     const clickEvent = (event) => {
@@ -69,8 +56,4 @@ export default function Signup() {
       </div>
     )
   
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> Commit
