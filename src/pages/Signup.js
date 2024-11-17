@@ -13,7 +13,7 @@ export default function Signup() {
     /*Synthetic event*/
     e.preventDefault();
    
-    axios.post(`http://localhost:5005/api/signup`, { email: userData.email, password: userData.password, location: userData.location, name: userData.name })
+    axios.post(`http://localhost:5005/auth/signup`, { email: userData.email, password: userData.password, location: userData.location, name: userData.name })
     .then((res) => {
       console.log(userData.data)
       res.json(userData.data)
