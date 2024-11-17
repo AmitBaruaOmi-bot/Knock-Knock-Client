@@ -13,7 +13,7 @@ export default function Signup() {
     /*Synthetic event*/
     e.preventDefault();
    
-    axios.post(`http://localhost:5005/auth/signup`, { email: userData.email, password: userData.password, location: userData.location, name: userData.name })
+    axios.post(`${process.env.REACT_BACKEND_URL}/auth/signup`, { email: userData.email, password: userData.password, location: userData.location, name: userData.name })
     .then((res) => {
       console.log(userData.data)
       res.json(userData.data)
@@ -22,6 +22,16 @@ export default function Signup() {
     .catch((err) => {
       console.log(err)
       alert('User already exists')
+    })
+
+    axios.get(`${import.meta.env.REACT_BACKEND_URL}/auth/user/:id`, { email: userData.email, password: userData.password, location: userData.location, name: userData.name })
+    .then((res) => {
+      console.log(userData.data)
+      res.json(userData.data)
+    })
+    .catch((err) => {
+      console.log(err)
+      alert('User not found')
     })
   }
 
