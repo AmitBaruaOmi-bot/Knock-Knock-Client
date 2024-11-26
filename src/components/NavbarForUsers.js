@@ -1,7 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Navbar() {
+
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        // Clear user authentication data (e.g., token)
+        localStorage.removeItem("authToken");
+        // Redirect to login page
+        navigate("/login");
+    };
+
     return (
         <div className='nav'>
             <nav className="navbar navbar-expand-lg bg-success">
@@ -20,6 +30,18 @@ export default function Navbar() {
                         <Link className="nav-link fst-italic d-inline text-white" to="/help">Help</Link>
 
                         <Link className="nav-link fst-italic d-inline text-white" to="/settings">Settimgs</Link>
+
+
+                        <Link to="/cart" className="btn btn-outline-light ms-3">
+                            Cart
+                        </Link>
+
+                        <button
+                            className="btn btn-outline-light ms-3"
+                            onClick={handleLogout}
+                        >
+                            Logout
+                        </button>
 
                     </div>
                 </div>

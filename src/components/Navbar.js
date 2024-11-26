@@ -8,10 +8,12 @@ export default function Navbar() {
                 <div className="container-fluid">
                     <div>
                         <Link className="navbar-brand fst-italic bg-success d-inline text-white" to="/">Knock-Knock</Link>
+                    </div>
 
-                        <Link className="nav-link fst-italic d-inline text-white" to="/login">Login</Link>
+                    <div className='d-flex'>
+                        <Link className="btn bg-primary fst-italic text-white mx-1" to="/login">Login</Link>
 
-                        <Link className="nav-link fst-italic d-inline text-white" to="/signup">Signup</Link>
+                        <Link className="btn bg-primary fst-italic text-white mx-1" to="/signup">Signup</Link>
                     </div>
                 </div>
             </nav>

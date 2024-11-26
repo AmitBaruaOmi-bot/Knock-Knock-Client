@@ -11,6 +11,7 @@ import Promotions from './pages/Promotions';
 import Help from './pages/Help';
 import Settings from './pages/Settings';
 import HomepageAfterLogin from './pages/HomepageAfterLogin';
+import Cart from './pages/Cart';
 import '../node_modules/bootstrap-dark-5/dist/css/bootstrap-dark.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -33,6 +34,7 @@ function App() {
           <Route exact path="/promotions" element={<Promotions/>} />
           <Route exact path="/help" element={<Help/>} />
           <Route exact path="/settings" element={<Settings/>} />
+          <Route path="/cart" element={<Cart/>} /> 
         </Routes>
       </div>
     </Router>

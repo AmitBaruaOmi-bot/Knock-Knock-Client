@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-
 import Carousel from '../components/Carousel'
 import Food from '../components/Food'
 
@@ -17,15 +16,7 @@ export default function Homepage() {
 
       <div><Carousel /></div>
 
-      <div className='m-3'>
-       <Food/>
-       <Food/>
-       <Food/>
-       <Food/>
-       <Food/>
-       <Food/>
-       <Food/>
-       <Food/>
+      <div className='col-12 col-lg'>
        <Food/>
       </div>
 

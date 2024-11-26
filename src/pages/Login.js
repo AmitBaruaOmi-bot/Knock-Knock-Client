@@ -1,58 +1,63 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import axios from 'axios'
-import "./Login.css"
-import { useNavigate } from 'react-router-dom'
-export default function Signup() {
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import "./Login.css";
 
-  const navigate = useNavigate()
-
-  const [userData, setUserData] = useState({ email: "", password: "" })
+export default function Login() {
+  const navigate = useNavigate();
+  const [userData, setUserData] = useState({ email: "", password: "" });
 
   const handleSubmit = async (e) => {
-    /*Synthetic event*/
     e.preventDefault();
 
-    axios.post(`${process.env.REACT_BACKEND_URL}auth/login`, { email: userData.email, password: userData.password })
-      .then((res) => {
-        console.log(userData.data)
-        res.json(userData.data)
-        navigate("/homepageafterlogin")
-      })
-      .catch((err) => {
-        console.log(err)
-        alert('User already exists')
-      })
+    try {
+      const res = await axios.post(
+        `${process.env.REACT_APP_API_URL}/auth/login`,
+        userData
+      );
+      console.log("Login successful", res.data);
+      localStorage.setItem("authToken", res.data.authToken); // Save token
+      navigate("/homepageafterlogin"); // Navigate to the home or dashboard
+    } catch (err) {
+      console.error("Login failed", err.response?.data || err.message);
+      alert(err.response?.data?.message || "Invalid email or password.");
+    }
+  };
 
-      axios.get(`${import.meta.env.REACT_BACKEND_URL}auth/user/:id`, { email: userData.email, password: userData.password })
-      .then((res) => {
-        console.log(userData.data)
-        res.json(userData.data)
-      })
-      .catch((err) => {
-        console.log(err)
-        alert('User not found')
-      })
-  }
+  const handleChange = (e) => {
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+  };
 
-  const clickEvent = (event) => {
-    setUserData({ ...userData, [event.target.name]: event.target.value })
-  }
   return (
-    <form className='form-control btn-outline-dark me-2 fst-italic bg-success text-white'>
-      <div className="mb-2">
-        <label for="exampleInputEmail1" className="form-label">Email</label>
-        <input type="email" placeholder='name@example.com' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-      </div>
-      <div className="mb-3">
-        <label for="exampleInputPassword1" className="form-label">Password</label>
-        <input type="password" placeholder='123Example@' className="form-control" id="exampleInputPassword1" />
-      </div>
-      <div className="mb-3 form-check">
-        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-        <label className="form-check-label" for="exampleCheck1">Remeber me</label>
-      </div>
-      <button type="submit" className="btn btn-primary">Submit</button>
-    </form>
-  )
+    <div className="container">
+      <form onSubmit={handleSubmit}>
+        <div className="col-md-4">
+          <label htmlFor="email" className="form-label">Email</label>
+          <input
+            type="email"
+            className="form-control"
+            id="email"
+            name="email"
+            value={userData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="col-md-4">
+          <label htmlFor="password" className="form-label">Password</label>
+          <input
+            type="password"
+            className="form-control"
+            id="password"
+            name="password"
+            value={userData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button type="submit" className="btn btn-primary">Submit</button>
+        <Link to="/signup" className="m-3 btn btn-primary">New User?</Link>
+      </form>
+    </div>
+  );
 }

@@ -3,8 +3,8 @@ import { Link } from'react-router-dom'
 
 export default function Myprofile() {
   return (
-    <div>
-       <Link className="nav-link fst-italic d-inline text-white" to="/logout">Logout</Link>
+    <div className='container'>
+       <Link to={"/"} className="m-3 btn btn-primary"> Logout </Link>
     </div>
   )
 }

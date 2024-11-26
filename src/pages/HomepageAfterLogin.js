@@ -7,30 +7,23 @@ import Footer from '../components/Footer'
 import Food from '../components/Food'
 
 export default function HomepageAfterLogin() {
+
   return (
     <div>
 
       <div className='home bg-success'>
 
-        <div> <NavbarForUsers /> </div>
+        <div> 
+          <NavbarForUsers /> 
+        </div>
 
         <div> <Carousel /> </div>
 
-        <div className='m-3'>
-          <Food/>
-          <Food/>
-          <Food/>
-          <Food/>
-          <Food/>
-          <Food/>
-          <Food/>
-          <Food/>
+        <div className='col-12 col-lg'>
           <Food/>
         </div>
 
         <div> <Footer /> </div>
-
-        <Link to={"/"} className="m-3 btn btn-primary"> Logout </Link>
 
       </div>
     </div>
