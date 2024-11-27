@@ -1,16 +1,22 @@
 import React from 'react'
+import NavbarForUsers from '../components/NavbarForUsers'
+import Footer from '../components/Footer'
 
 export default function Myorders() {
 
-  // function handleSubmit(e) {
-  //   e.preventDefault()
-    
-  // }
   return (
-    <div>
-      <form>
-        
-      </form>
+    <div className='bg-success'>
+      <div>
+        <NavbarForUsers />
+      </div>
+
+       <div>
+        HISTORY
+       </div>
+
+      <div>
+        <Footer />
+      </div>
     </div>
   )
 }

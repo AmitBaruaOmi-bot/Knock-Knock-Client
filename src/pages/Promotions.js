@@ -1,9 +1,21 @@
 import React from 'react'
+import NavbarForUsers from '../components/NavbarForUsers'
+import Footer from '../components/Footer'
 
 export default function Promotions() {
   return (
-    <div>
-      <img src='./public/assets/pngtree-available-now-png-image_3782001.jpg' alt="" />
+    <div className='bg-success'>
+      <div>
+        <NavbarForUsers />
+      </div>
+
+       <div>
+        <h2 >No promotions available right now</h2>
+       </div>
+
+      <div>
+        <Footer />
+      </div>
     </div>
   )
 }

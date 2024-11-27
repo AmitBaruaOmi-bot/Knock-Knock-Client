@@ -16,6 +16,7 @@ export default function Login() {
         userData
       );
       console.log("Login successful", res.data);
+      localStorage.setItem("userEmail", res.data.email);
       localStorage.setItem("authToken", res.data.authToken); // Save token
       navigate("/homepageafterlogin"); // Navigate to the home or dashboard
     } catch (err) {

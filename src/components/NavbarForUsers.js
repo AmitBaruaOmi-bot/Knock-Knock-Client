@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Badge from 'react-bootstrap/Badge';
+import { useCart } from '../components/ContextReducer';
+
 
 export default function Navbar() {
 
+    const cart = useCart();
     const navigate = useNavigate();
 
     const handleLogout = () => {
@@ -17,7 +21,7 @@ export default function Navbar() {
             <nav className="navbar navbar-expand-lg bg-success">
                 <div className="container-fluid">
                     <div>
-                        <Link className="navbar-brand fst-italic bg-success d-inline text-white" to="/">Knock-Knock</Link>
+                        <Link className="navbar-brand fst-italic bg-success d-inline text-white" to="/homepageafterlogin">Knock-Knock</Link>
 
                         <Link className="nav-link fst-italic d-inline text-white" to="/myorders">Myorders</Link>
 
@@ -32,12 +36,13 @@ export default function Navbar() {
                         <Link className="nav-link fst-italic d-inline text-white" to="/settings">Settimgs</Link>
 
 
-                        <Link to="/cart" className="btn btn-outline-light ms-3">
-                            Cart
+                        <Link to="/cart" className="btn btn-outline-light fst-italic ms-3">
+                            Cart {""}
+                            <Badge pill className='bg-primary'>{cart.length}</Badge>
                         </Link>
 
                         <button
-                            className="btn btn-outline-light ms-3"
+                            className="btn btn-outline-light fst-italic ms-3"
                             onClick={handleLogout}
                         >
                             Logout
